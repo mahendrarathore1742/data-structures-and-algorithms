@@ -49,14 +49,10 @@ string infix_to_postfix(string s){
             {
                 res+=st.top();
                 st.pop();
-                
             }
             st.push(s[i]);
 
         }
-
-        
- 
     }
     while (!st.empty())
         {
