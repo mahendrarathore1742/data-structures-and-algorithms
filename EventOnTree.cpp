@@ -62,6 +62,29 @@ int caldiameter(Node *root){
 
 }
 
+int Calcdiameter(Node *root,int *height){
+	if(root==NULL){
+		*height=0;
+		return 0;
+	}
+
+	int lh=0;
+	int rh=0;
+
+	int lDiameter=Calcdiameter(root->left,&lh);
+	int RDiameter=Calcdiameter(root->right,&rh);
+
+	int curr=lh+rh+1;
+
+	*height=max(lh,rh)+1;
+
+
+	return max(curr,max(lDiameter,RDiameter));
+
+
+
+}
+
 
 int main(){
 
@@ -74,15 +97,16 @@ int main(){
 	root->right->left=new Node(7);
 
 
-	cout<<nodeCount(root)<<endl;
+	// cout<<nodeCount(root)<<endl;
 
-	cout<<nodesum(root)<<endl;
+	// cout<<nodesum(root)<<endl;
 
-	cout<<calcheight(root)<<endl;
+	// cout<<calcheight(root)<<endl;
 
-	cout<<caldiameter(root)<<endl;
+	// cout<<caldiameter(root)<<endl;
 
-
+	int height =0;
+	cout<<Calcdiameter(root,&height)<<endl;
 
 	return 0;
 }
