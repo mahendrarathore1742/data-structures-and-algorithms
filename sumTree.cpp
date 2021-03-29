@@ -24,6 +24,19 @@ int nodeCount(Node  * root){
 }
 
 
+int nodesum(Node  * root){
+
+	if(root==NULL){
+		return 0;
+	}
+	return nodesum(root->left)+nodesum(root->right)+root->data;
+}
+
+
+
+
+
+
 int main(){
 
 	Node *root=new Node(1);
@@ -37,7 +50,7 @@ int main(){
 
 	cout<<nodeCount(root)<<endl;
 
-	
+	cout<<nodesum(root)<<endl;
 
 
 	return 0;
