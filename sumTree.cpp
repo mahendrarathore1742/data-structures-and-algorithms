@@ -32,9 +32,35 @@ int nodesum(Node  * root){
 	return nodesum(root->left)+nodesum(root->right)+root->data;
 }
 
+int calcheight(Node *root){
+	
+	if(root==NULL){
+		return 0;
+	}
+
+	int Lheight=calcheight(root->left);
+	int Hheight=calcheight(root->right);
+
+	return max(Lheight,Hheight)+1;
+}
 
 
+int caldiameter(Node *root){
+	if(root==NULL){
+		return 0;
+	}
 
+	int Lheight=calcheight(root->left);
+	int Rright=calcheight(root->right);
+
+	int curr=Lheight+Rright+1;
+
+	int lDiameter=caldiameter(root->left);
+	int RDiameter=caldiameter(root->right);
+
+	return max(curr,max(lDiameter,RDiameter))+1;
+
+}
 
 
 int main(){
@@ -51,6 +77,11 @@ int main(){
 	cout<<nodeCount(root)<<endl;
 
 	cout<<nodesum(root)<<endl;
+
+	cout<<calcheight(root)<<endl;
+
+	cout<<caldiameter(root)<<endl;
+
 
 
 	return 0;
