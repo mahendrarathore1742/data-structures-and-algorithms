@@ -24,11 +24,9 @@ int height(Node *root){
 	int lh=height(root->left);
 	int rh=height(root->right);
 	return max(lh,rh)+1;
-
 }
 
 bool isBalanvedTree(Node *root){
-
 	if(root==NULL){
 		return true;
 	}
@@ -44,7 +42,6 @@ bool isBalanvedTree(Node *root){
 
 	int lh=height(root->left);
 	int rh=height(root->right);
-
 
 	if(abs(lh-rh)<=1){
 		return true;
@@ -81,7 +78,7 @@ bool isBalanvedTree2(Node *root,int *height){
 
 
 
-int main(){
+int main(){	
 
 	Node *root=new Node(1);
 	root->left=new Node(2);
