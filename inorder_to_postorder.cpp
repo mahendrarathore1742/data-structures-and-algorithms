@@ -24,7 +24,7 @@ int search(int inorder[],int start,int end,int curr){
 	}
 		return -1;
 }
-
+ 
 Node * buildTree(int preorder[],int inorder[],int start,int end){
 	static int idx=0;
 
