@@ -35,7 +35,7 @@ bool isBalanvedTree(Node *root){
 		return false;
 	}
 
-	if (isBalanvedTree(root->left)==false)
+	if (isBalanvedTree(root->right)==false)
 	{
 		return false;
 	}
