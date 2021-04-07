@@ -24,7 +24,9 @@ void zigzagTraversal(Node *root){
 
 	stack<Node*> currLevel;
 	stack<Node*> nextLevel;
+
 	bool lefttoright=true;
+	
 	currLevel.push(root);
 
 	while(!currLevel.empty()){
