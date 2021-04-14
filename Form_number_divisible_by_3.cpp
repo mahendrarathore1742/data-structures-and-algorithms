@@ -32,7 +32,7 @@ void computeNumberFromSubarray(vector<int> arr,int k){
 			ans=make_pair(j-k+1,j);
 			found=true;
 		}
-
+ 
 	}
 
 	if(!found){
