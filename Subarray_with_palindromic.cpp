@@ -52,7 +52,7 @@ int findPalindromicSubarray(vector<int> arr,int k){
 
 int main(){
 
-	vector<int> arr={2,3,5,1,1,5};
+	std::vector<int> arr={2,3,5,1,1,5};
 	int k=4;
 
 	int ans=findPalindromicSubarray(arr,k);
