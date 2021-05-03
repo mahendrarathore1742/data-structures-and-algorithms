@@ -11,9 +11,7 @@ void insertAtButtom(stack<int> &st,int elem){
     int topel= st.top();
     st.pop();
     insertAtButtom(st,elem);
-
     st.push(topel);
-
 }
 
 void reversestack(stack<int> &st){
@@ -35,14 +33,10 @@ int main(){
     st.push(4);
     st.push(5);
     reversestack(st);
-
     while (!st.empty())
     {
         cout<<st.top()<<" ";
-        st.pop();
-        
+        st.pop();    
     }cout<<endl;
-
-
     return 0;
 }
